@@ -1,4 +1,4 @@
-# Jornada Sustentvel-agrinho 2025
+# Jornada Sustentavel-agrinho 2025
 
 Este repositório tem o código do site Agrinho 2025: Campo e Cidade em Conexão. É um site interativo que celebra como o campo e a cidade dependem um do outro.
 
