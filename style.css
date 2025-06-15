@@ -1,0 +1,26 @@
+/* Estilos personalizados para o corpo aplicar a fonte Inter */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Garante que o canvas p5.js seja responsivo e centralizado */
+#p5-canvas-container canvas {
+  display: block; /* Remove espaço extra abaixo do canvas */
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem; /* Bordas arredondadas para o canvas */
+}
+
+/* Animação para o título do cabeçalho */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
