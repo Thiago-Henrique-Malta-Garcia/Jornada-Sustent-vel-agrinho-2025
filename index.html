@@ -1,103 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jornada Sustentável</title>
-  <!-- Tailwind CSS CDN para estilos modernos e responsivos -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Carrega a fonte Inter do Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Link para o arquivo de imagem do favicon na pasta img/ -->
-  <link rel="icon" href="img/planta.png" type="image/png">
-  <!-- Link para o arquivo de estilos personalizado -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Biblioteca p5.js para elementos de canvas interativos -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
-  <!-- Link para o arquivo JavaScript principal -->
-  <script src="sketch.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Sustentável</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/planta.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
+    <script src="sketch.js" defer></script>
 </head>
-<body class="bg-gradient-to-br from-green-50 to-blue-50 text-gray-800 antialiased">
-  <!-- Seção do Cabeçalho -->
-  <header class="bg-gradient-to-r from-green-800 to-blue-700 text-white p-8 text-center shadow-2xl rounded-b-3xl">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-2 animate-pulse">Jornada Sustentável</h1>
-    <p class="text-xl md:text-3xl font-light italic">agrinho 2025</p>
-  </header>
 
-  <!-- Contêiner do Canvas p5.js - Onde a animação da conexão acontecerá -->
-  <div id="p5-canvas-container" class="w-full max-w-5xl mx-auto my-10 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-gray-200">
-    <!-- O canvas p5.js será injetado aqui pelo script -->
-  </div>
+<body class="bg-gradient-to-br from-green-50 to-blue-50 text-gray-800 font-inter">
 
-  <!-- Seção Hero -->
-  <section class="hero flex flex-col md:flex-row items-center bg-white p-8 md:p-12 my-10 rounded-xl shadow-xl max-w-5xl mx-auto transform hover:scale-105 transition-transform duration-300">
-    <img src="https://placehold.co/600x400/D4EDDA/155724?text=Campo+e+Cidade" alt="Ilustração da conexão entre Campo e Cidade" class="w-full md:w-1/2 rounded-lg shadow-lg mb-8 md:mb-0 md:mr-12">
-    <div class="hero-text flex-1">
-      <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-4">Unidos por um futuro melhor</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        Campo e cidade são partes interdependentes de uma sociedade saudável e sustentável.
-        A harmonia entre esses dois polos é a chave para um desenvolvimento equilibrado e próspero.
-      </p>
-    </div>
-  </section>
+    <!-- Cabeçalho -->
+    <header class="bg-gradient-to-r from-green-800 to-blue-700 text-white p-8 text-center shadow-2xl rounded-b-3xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-2">Jornada Sustentável</h1>
+        <p class="text-xl md:text-3xl italic">Agrinho 2025</p>
+    </header>
 
-  <!-- Seção de Importância -->
-  <section class="importance p-8 md:p-12 bg-blue-50 my-10 rounded-xl shadow-xl max-w-5xl mx-auto transform hover:translate-y-1 transition-transform duration-300">
-    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6 text-center">Por que essa conexão é essencial?</h2>
-    <p class="text-lg leading-relaxed mb-8 text-gray-700 text-center">
-      O campo abastece as cidades com alimentos, energia e matérias-primas vitais. A cidade, por sua vez, fornece maquinários, tecnologias de ponta e infraestrutura
-      que impulsionam a produção rural e a qualidade de vida no campo. Essa troca constante e sinérgica constrói uma sociedade mais forte e equilibrada para todos.
-    </p>
-    <img src="https://placehold.co/800x500/CCE5FF/004085?text=Produtividade+e+Tecnologia" alt="Agricultor utilizando tecnologia no campo" class="content-image w-full rounded-lg shadow-lg">
-  </section>
-
-  <!-- Seção de Exemplos -->
-  <section class="examples p-8 md:p-12 bg-white my-10 rounded-xl shadow-xl max-w-5xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-8 text-center">Exemplos Vivos da Conexão Campo-Cidade</h2>
-
-    <div class="example-item mb-12 pb-8 border-b-2 border-gray-200 last:border-b-0">
-      <h3 class="text-2xl font-semibold text-green-600 mb-4">Produção de Alimentos com Máquinas Urbanas</h3>
-      <p class="text-lg leading-relaxed mb-6 text-gray-700">
-        A engenhosidade urbana cria máquinas agrícolas avançadas, como tratores e colheitadeiras computadorizadas. Com elas, o campo otimiza a produção de alimentos,
-        que são transportados para a cidade, abastecendo mercados vibrantes, escolas e a gastronomia local. Um ciclo perfeito de inovação e nutrição.
-      </p>
-      <img src="https://placehold.co/800x500/EAF9DC/4F8A10?text=Maquinas+no+Campo" alt="Trator moderno trabalhando no campo" class="content-image w-full rounded-lg shadow-lg">
+    <!-- Canvas -->
+    <div id="p5-canvas-container"
+        class="max-w-5xl mx-auto my-10 bg-white rounded-xl shadow-xl border-2 border-gray-200 overflow-hidden">
+        <!-- p5.js será injetado aqui -->
     </div>
 
-    <div class="example-item mb-12 pb-8 border-b-2 border-gray-200 last:border-b-0">
-      <h3 class="text-2xl font-semibold text-green-600 mb-4">Processamento e Distribuição Urbana</h3>
-      <p class="text-lg leading-relaxed mb-6 text-gray-700">
-        O leite fresco ordenhado no campo é levado para indústrias urbanas de última geração, onde é pasteurizado, embalado e distribuído com eficiência para supermercados e lares.
-        O mesmo processo transformador ocorre com carnes, grãos e hortaliças, que saem do campo e chegam à mesa do consumidor com qualidade e segurança.
-      </p>
-      <img src="https://placehold.co/800x500/D4EDDA/155724?text=Distribuicao+Urbana" alt="Caminhões entregando alimentos na cidade" class="content-image w-full rounded-lg shadow-lg">
-    </div>
+    <!-- Hero -->
+    <section
+        class="flex flex-col md:flex-row items-center bg-white p-8 md:p-12 my-10 rounded-xl shadow-xl max-w-5xl mx-auto">
+        <img src="img/_image (1).webp"
+            alt="Vista aérea de fazenda com plantações verdes" loading="lazy"
+            class="w-full md:w-1/2 rounded-lg shadow-lg mb-8 md:mb-0 md:mr-12">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-4">Unidos pelo mesmo propósito</h2>
+            <p class="text-lg text-gray-700">
+                A cidade e o campo se completam: enquanto a fazenda produz com tecnologia, a cidade consome, distribui e
+                valoriza. Juntos, constroem um futuro sustentável.
+            </p>
+        </div>
+    </section>
 
-    <div class="example-item">
-      <h3 class="text-2xl font-semibold text-green-600 mb-4">Educação e Inovação Mútua</h3>
-      <p class="text-lg leading-relaxed mb-6 text-gray-700">
-        Escolas técnicas e universidades nas cidades formam uma nova geração de engenheiros agrônomos, técnicos agrícolas e profissionais inovadores que retornam ao campo
-        para modernizar as lavouras, aplicar novas tecnologias e promover a sustentabilidade. O conhecimento gerado na cidade floresce no campo.
-      </p>
-      <img src="https://placehold.co/800x500/CCE5FF/004085?text=Inovacao+e+Conhecimento" alt="Estudantes em uma sala de aula e plantação ao fundo" class="content-image w-full rounded-lg shadow-lg">
-    </div>
-  </section>
+    <!-- Conexão -->
+    <section class="bg-blue-50 p-8 md:p-12 my-10 rounded-xl shadow-xl max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6 text-center">Conexão Campo e Cidade</h2>
+        <p class="text-lg text-gray-700 mb-8 text-center">
+            O campo abastece a cidade com alimentos, matérias-primas e recursos naturais. A cidade retorna com
+            tecnologia, infraestrutura, comércio e conhecimento.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Campo -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="img/images (2).jfif"
+                    alt="Trator arando campo de plantação" loading="lazy"
+                    class="w-full h-64 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-green-700 mb-2">Fazenda e Natureza</h3>
+                <p class="text-gray-700">No campo, máquinas modernas colhem alimentos que abastecem a cidade
+                    diariamente.</p>
+            </div>
+            <!-- Cidade -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="img/images (3).jfif"
+                    alt="Prédios altos de uma cidade ao entardecer" loading="lazy"
+                    class="w-full h-64 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cidade em Movimento</h3>
+                <p class="text-gray-700">A cidade consome, transforma e compartilha os frutos da terra com o mundo
+                    urbano.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Seção de Benefícios -->
-  <section class="benefits p-8 md:p-12 bg-white my-10 rounded-xl shadow-xl max-w-5xl mx-auto transform hover:scale-105 transition-transform duration-300">
-    <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6 text-center">Benefícios da Integração Sustentável</h2>
-    <ul class="list-disc list-inside text-lg space-y-3 text-gray-700 pl-4 md:pl-8">
-      <li><strong class="text-green-800">Abastecimento garantido</strong> e diversificado nas cidades, com alimentos frescos e de qualidade.</li>
-      <li><strong class="text-green-800">Valorização do produtor rural</strong>, com acesso a mercados mais amplos e tecnologias.</li>
-      <li><strong class="text-green-800">Desenvolvimento tecnológico conjunto</strong>, impulsionando a pesquisa e a inovação em ambas as áreas.</li>
-      <li><strong class="text-green-800">Estímulo ao comércio e à cultura</strong>, enriquecendo a vida em campo e cidade.</li>
-      <li><strong class="text-green-800">Preservação ambiental</strong> e uso consciente dos recursos através de boas práticas agrícolas.</li>
-    </ul>
-  </section>
+    <!-- Exemplos reais -->
+    <section class="bg-white p-8 md:p-12 my-10 rounded-xl shadow-xl max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6 text-center">Exemplos da Integração</h2>
 
-  <!-- Seção do Rodapé -->
-  <footer class="bg-gradient-to-r from-green-800 to-blue-700 text-white p-6 text-center mt-12 rounded-t-3xl shadow-2xl">
-    <p class="text-lg">&copy; 2025 Thiago Henrique. Todos os direitos reservados.</p>
-  </footer>
+        <!-- Exemplo 1 -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-green-600 mb-3">Leite do campo para a cidade</h3>
+            <p class="text-gray-700 mb-4">
+                O leite ordenhado na fazenda é transportado com segurança até os centros urbanos, onde é processado,
+                embalado e distribuído.
+            </p>
+            <img src="img/vacas-de-fazenda-automatizada-industrial-de-leite-de-vaca-vacas-no-paddock-com-etiquetas-nas-orelhas-comem-feno-e-descansam_154092-15566.avif"
+                alt="Leiteiras na fazenda prontas para transporte" loading="lazy" class="rounded-lg shadow-md w-full">
+        </div>
+
+        <!-- Exemplo 2 -->
+        <div>
+            <h3 class="text-2xl font-semibold text-green-600 mb-3">Tecnologia urbana no campo</h3>
+            <p class="text-gray-700 mb-4">
+                A tecnologia desenvolvida nas cidades chega ao campo em forma de drones, sensores e máquinas
+                inteligentes, modernizando a produção rural.
+            </p>
+            <img src="img/6fe97bd3-cea8-4afb-a8ab-dd7f0b672b56.jpg"
+                alt="Agricultor usando tablet e drone na lavoura" loading="lazy" class="rounded-lg shadow-md w-full">
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="bg-blue-50 p-8 md:p-12 my-10 rounded-xl shadow-xl max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6 text-center">Benefícios da União</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 pl-6">
+            <li>Maior acesso a alimentos frescos e locais nas cidades.</li>
+            <li>Melhoria na renda e nas condições de vida no campo.</li>
+            <li>Redução do desperdício com cadeias curtas de distribuição.</li>
+            <li>Integração de culturas, saberes e estilos de vida.</li>
+            <li>Desenvolvimento sustentável e inovação cooperativa.</li>
+        </ul>
+    </section>
+
+    <!-- Rodapé -->
+    <footer
+        class="bg-gradient-to-r from-green-800 to-blue-700 text-white p-6 text-center mt-12 rounded-t-3xl shadow-2xl">
+        <p class="text-lg">&copy; 2025 Thiago Henrique. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
+
 </html>
